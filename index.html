@@ -1,12 +1,71 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
-<!-- Datos que describen el documento -->
-<meta charset="UTF-8">
-<title>Comenzando</title>
+	<meta charset="UTF-8">
+	<title>CalculadoraRPN</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="Calculadora.css" />
+	<script src="Calculadora.js"></script>
 </head>
+
 <body>
-<!-- Datos con el contenido que aparece en el navegador -->
-<h1>¡Hola mundooooooooooooooo!</h1>
+	<h1>Calculadora RPN</h1>
+	<form>
+		<p>
+			<input type="text" id="pila" disabled />
+            <label for="pila">Pila</label>
+		</p>
+		<p>
+			<input type="text" id="pantalla" disabled />
+            <label for="pantalla">Pantalla</label>
+		</p>
+		<p>
+			<input type="button" class="buttonP" value="sin" onClick="c.sin()">
+			<input type="button" class="buttonP" value="cos" onClick="c.cos()">
+			<input type="button" class="buttonP" value="tan" onClick="c.tan()">
+			<input type="button" class="buttonP" value="C" onClick="c.botonC()">
+			<input type="button" class="buttonP" value="<=" onClick="c.borrar()">
+		</p>
+		<p>
+			<input type="button" class="buttonP" value="x2" onClick="c.cuadrado()">
+			<input type="button" class="buttonP" value="x^y" onClick="c.potenciaX()">
+			<input type="button" class="buttonP" value="ln" onClick="c.ln()">
+			<input type="button" class="buttonP" value="exp" onClick="c.exponencial()">
+			<input type="button" class="buttonP" value="Enter" onClick="c.apilar()">
+		</p>
+		<p>
+			<input type="button" class="buttonG" value="7" onClick="c.digito(7)">
+			<input type="button" class="buttonG" value="8" onClick="c.digito(8)">
+			<input type="button" class="buttonG" value="9" onClick="c.digito(9)">
+			<input type="button" class="buttonG" value="/" onClick="c.operador('/')">
+		</p>
+		<p>
+			<input type="button" class="buttonG" value="4" onClick="c.digito(4)">
+			<input type="button" class="buttonG" value="5" onClick="c.digito(5)">
+			<input type="button" class="buttonG" value="6" onClick="c.digito(6)">
+			<input type="button" class="buttonG" value="*" onClick="c.operador('*')">
+		</p>
+		<p>
+			
+			<input type="button" class="buttonG" value="1" onClick="c.digito(1)">
+			<input type="button" class="buttonG" value="2" onClick="c.digito(2)">
+			<input type="button" class="buttonG" value="3" onClick="c.digito(3)">
+			<input type="button" class="buttonG" value="-" onClick="c.operador('-')">
+		</p>
+		<p>
+			
+			<input type="button" class="buttonG" value="+/-" onClick="c.masMenos()">
+			<input type="button" class="buttonG" value="0" onClick="c.digito(0)">
+			<input type="button" class="buttonG" value="." onClick="c.digito('.')">
+			<input type="button" class="buttonG" value="+" onClick="c.operador('+')">
+		</p>
+
+	</form>
+	<footer>
+		<a href="http://validator.w3.org/check/referer" hreflang="en-us"><img src="valid-html5-button.png" alt="¡HTML5 válido!" height="31" width="88" /></a>
+		<a><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS válido!" /></a>
+	</footer>
 </body>
+
 </html>
